@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim's Store - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-left">
+                <h1 class="brand">Kim's Store</h1>
+                <h2>Welcome Back</h2>
+                <p>Ilogin mo ang account mo, kainan na</p>
+
+                <form method="POST">
+                    <label>Full Name</label>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Enter your password" required>
+
+                    <div class="form-links">
+                        <label><input type="checkbox"> Remember me</label>
+                        <a href="{{ url_for('forgot') }}" class="link-right">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Login</button>
+                </form>
+
+                <p class="form-text">Don’t have an account? <a href="{{ url_for('register') }}">Register</a></p>
+            </div>
+
+            <div class="auth-right">
+                <img src="{{ url_for('static', filename='Kims Store.png') }}" alt="Logo" class="logo">
+            </div>
+        </div>
+    </div>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <script>
+          alert("{{ messages[0] }}");
+        </script>
+      {% endif %}
+    {% endwith %}
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chart - Kim's Store</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar" id="sidebar">
+      <h2 class="logo">Kim's Store</h2>
+      <nav class="menu">
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('drinks') }}">Drinks</a>
+        <a href="{{ url_for('chart') }}" class="active">Chart</a>
+        <a href="{{ url_for('payment') }}">Payment Method</a>
+        <a href="#">Settings</a>
+        <a href="{{ url_for('login') }}">Logout</a>
+      </nav>
+    </aside>
+
+    <main class="main" id="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <form method="get" action="{{ url_for('dashboard') }}">
+          <input type="text" name="q" placeholder="Search...">
+          <button type="submit">Search</button>
+        </form>
+      </header>
+
+      <section class="content">
+        <h1>Sales Chart</h1>
+        <p>View your restaurant’s performance below.</p>
+        <canvas id="salesChart" width="400" height="200"></canvas>
+      </section>
+    </main>
+  </div>
+
+<script src="{{ url_for('static', filename='javascript/dashboard.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Method - Kim's Store</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+
+  <div class="dashboard">
+    <aside class="sidebar" id="sidebar">
+      <h2 class="logo">Kim's Store</h2>
+      <nav class="menu">
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('drinks') }}">Drinks</a>
+        <a href="{{ url_for('chart') }}">Chart</a>
+        <a href="{{ url_for('payment') }}" class="active">Payment Method</a>
+        <a href="#">Settings</a>
+        <a href="{{ url_for('login') }}">Logout</a>
+      </nav>
+    </aside>
+
+    <main class="main" id="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <form method="get" action="{{ url_for('dashboard') }}">
+          <input type="text" name="q" placeholder="Search...">
+          <button type="submit">Search</button>
+        </form>
+      </header>
+
+      <section class="content">
+        <h1>Payment Method</h1>
+        <p>Select your preferred payment option:</p>
+
+        <div class="payment-options">
+          <div class="payment-card">
+            <h2>GCash</h2>
+            <p>Pay easily with your GCash wallet.</p>
+          </div>
+
+          <div class="payment-card">
+            <h2>PayMaya</h2>
+            <p>Use your PayMaya account for secure payments.</p>
+          </div>
+
+          <div class="payment-card">
+            <h2>Cash on Delivery (COD)</h2>
+            <p>Pay in cash when your order is delivered.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+ <script src="{{ url_for('static', filename='javascript/dashboard.js') }}"></script>
+</body>
+</html>

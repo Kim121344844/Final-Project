@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drinks - Kim's Store</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='quantity.css') }}">
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar" id="sidebar">
+      <h2 class="logo">Kim's Store</h2>
+      <nav class="menu">
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('drinks') }}" class="active">Drinks</a>
+        <a href="{{ url_for('chart') }}">Chart</a>
+        <a href="{{ url_for('payment') }}">Payment Method</a>
+        <a href="#">Settings</a>
+        <a href="{{ url_for('login') }}">Logout</a>
+      </nav>
+    </aside>
+
+    <main class="main" id="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <form method="get" action="{{ url_for('drinks') }}">
+          <input type="text" name="q" placeholder="Search...">
+          <button type="submit">Search</button>
+        </form>
+      </header>
+
+      <section class="content">
+        <h1>Choices of Drinks</h1>
+        <div class="food-grid">
+
+          <div class="food-item">
+            <img src="{{ url_for('static', filename='images/margarita.png') }}" alt="Margarita">
+            <p>Margarita</p>
+            <div class="quantity-container">
+              <button class="minus">−</button>
+              <span class="quantity">0</span>
+              <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="food-item">
+            <img src="{{ url_for('static', filename='images/mojito.png') }}" alt="Mojito">
+            <p>Mojito</p>
+            <div class="quantity-container">
+              <button class="minus">−</button>
+              <span class="quantity">0</span>
+              <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="food-item">
+            <img src="{{ url_for('static', filename='images/icedtea.png') }}" alt="Iced Tea">
+            <p>Iced Tea</p>
+            <div class="quantity-container">
+              <button class="minus">−</button>
+              <span class="quantity">0</span>
+              <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="food-item">
+            <img src="{{ url_for('static', filename='images/lemonade.png') }}" alt="Lemonade">
+            <p>Lemonade</p>
+            <div class="quantity-container">
+              <button class="minus">−</button>
+              <span class="quantity">0</span>
+              <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="food-item">
+            <img src="{{ url_for('static', filename='images/soda.png') }}" alt="Soda">
+            <p>Soda</p>
+            <div class="quantity-container">
+              <button class="minus">−</button>
+              <span class="quantity">0</span>
+              <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="food-item">
+            <img src="{{ url_for('static', filename='images/beer.png') }}" alt="Beer">
+            <p>Beer</p>
+            <div class="quantity-container">
+              <button class="minus">−</button>
+              <span class="quantity">0</span>
+              <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="food-item">
+            <img src="{{ url_for('static', filename='images/tequila.png') }}" alt="Tequila">
+            <p>Tequila</p>
+            <div class="quantity-container">
+              <button class="minus">−</button>
+              <span class="quantity">0</span>
+              <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="food-item">
+            <img src="{{ url_for('static', filename='images/water.png') }}" alt="Water">
+            <p>Water</p>
+            <div class="quantity-container">
+              <button class="minus">−</button>
+              <span class="quantity">0</span>
+              <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="food-item">
+            <img src="{{ url_for('static', filename='images/coffee.png') }}" alt="Coffee">
+            <p>Coffee</p>
+            <div class="quantity-container">
+              <button class="minus">−</button>
+              <span class="quantity">0</span>
+              <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="food-item">
+            <img src="{{ url_for('static', filename='images/hotchocolate.png') }}" alt="Hot Chocolate">
+            <p>Hot Chocolate</p>
+            <div class="quantity-container">
+              <button class="minus">−</button>
+              <span class="quantity">0</span>
+              <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="{{ url_for('static', filename='javascript/dashboard.js') }}"></script>
+  <script src="{{ url_for('static', filename='javascript/quantity.js') }}"></script>
+</body>
+</html>
