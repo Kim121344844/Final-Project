@@ -1,0 +1,107 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100%;
+  background-color: #b22222;
+  padding-top: 30px;
+  transform: translateX(-250px);
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar .logo {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.sidebar .menu a {
+  display: block;
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+  margin: 5px 0;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.sidebar .menu a.active,
+.sidebar .menu a:hover {
+  background-color: #800000;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-btn {
+  font-size: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.main {
+  margin-left: 0;
+  transition: 0.3s;
+  padding: 20px;
+}
+
+.sidebar.active ~ .main {
+  margin-left: 220px;
+}
+
+.chart-container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #f4f6f8;
+}
+
+.remove-btn {
+  background-color: #b22222;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.remove-btn:hover {
+  background-color: #800000;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin-left: 0;
+  }
+}
