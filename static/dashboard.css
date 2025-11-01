@@ -13,15 +13,27 @@ body {
 .dashboard {
   display: flex;
   height: 100vh;
+  background: rgba(135, 206, 250, 0.3); 
+  backdrop-filter: blur(8px);
 }
 
 .sidebar {
   width: 250px;
-  background: #b22222;
+  background: rgba(10, 25, 70, 0.7); 
   color: white;
   display: flex;
   flex-direction: column;
   padding: 20px;
+  position: fixed;
+  top: 0;
+  left: -260px;
+  height: 100%;
+  transition: left 0.3s ease;
+  z-index: 10;
+}
+
+.sidebar.active {
+  left: 0;
 }
 
 .logo {
@@ -32,7 +44,7 @@ body {
 
 .menu a {
   display: block;
-  color: #cbd5e1;
+  color: orange;
   text-decoration: none;
   padding: 12px 10px;
   border-radius: 8px;
@@ -42,7 +54,7 @@ body {
 
 .menu a:hover,
 .menu a.active {
-  background: #334155;
+  background: rgba(30, 58, 138, 0.7); 
   color: #fff;
 }
 
@@ -53,11 +65,12 @@ body {
 }
 
 .topbar {
-  background: white;
+  background: rgba(135, 206, 250, 0.3); 
+  backdrop-filter: blur(6px);
   padding: 15px 20px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
 .topbar form {
@@ -76,7 +89,7 @@ body {
 
 .topbar button {
   background: #2563eb;
-  color: white;
+  color: orange;
   border: none;
   padding: 8px 16px;
   border-radius: 8px;
@@ -109,30 +122,12 @@ body {
 
 .menu-btn {
   background: #1e293b;
-  color: white;
+  color: orange;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
   padding: 8px 12px;
   border-radius: 8px;
-  margin-right: 10px;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -260px;
-  width: 250px;
-  height: 100%;
-  background: #1e293b;
-  color: white;
-  padding: 20px;
-  transition: left 0.3s ease;
-  z-index: 10;
-}
-
-.sidebar.active {
-  left: 0;
 }
 
 .payment-options {
@@ -143,7 +138,7 @@ body {
 }
 
 .payment-card {
-  background: white;
+  background: rgba(135, 206, 250, 0.3); 
   border-radius: 15px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
@@ -196,7 +191,7 @@ body {
 }
 
 .food-item {
-  background: #fff;
+  background: rgba(135, 206, 250, 0.3); 
   border-radius: 12px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   padding: 15px;
@@ -237,7 +232,7 @@ body {
 }
 
 .cart-content {
-  background: #fff;
+  background: rgba(135, 206, 250, 0.3); 
   color: #333;
   padding: 20px;
   border-radius: 10px;
@@ -251,4 +246,47 @@ body {
   float: right;
   cursor: pointer;
   font-size: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 20px;
+  background: none;
+}
+
+th, td {
+  background: rgba(135, 206, 250, 0.3); 
+  color: #b22222;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: none;
+}
+
+td {
+  font-weight: 500;
+  color: #333;
+}
+
+th {
+  background: rgba(135, 206, 250, 0.3); 
+  border-bottom: none;
+}
+
+tr {
+  background: none;
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    border-spacing: 10px;
+  }
+  th, td {
+    font-size: 16px;
+    padding: 15px;
+  }
 }
