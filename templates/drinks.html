@@ -46,111 +46,121 @@
           <div class="food-item">
             <img src="{{ url_for('static', filename='images/margarita.png') }}" alt="Margarita">
             <p>Margarita</p>
+            <p class="price">₱180</p>
             <div class="quantity-container">
               <button class="minus">−</button>
               <span class="quantity">0</span>
               <button class="plus">+</button>
             </div>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Margarita', this.parentElement.querySelector('.quantity').textContent, 180)">Add to Cart</button>
           </div>
 
           <div class="food-item">
             <img src="{{ url_for('static', filename='images/mojito.png') }}" alt="Mojito">
             <p>Mojito</p>
+            <p class="price">₱170</p>
             <div class="quantity-container">
               <button class="minus">−</button>
               <span class="quantity">0</span>
               <button class="plus">+</button>
             </div>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Mojito', this.parentElement.querySelector('.quantity').textContent, 170)">Add to Cart</button>
           </div>
 
           <div class="food-item">
             <img src="{{ url_for('static', filename='images/icedtea.png') }}" alt="Iced Tea">
             <p>Iced Tea</p>
+            <p class="price">₱90</p>
             <div class="quantity-container">
               <button class="minus">−</button>
               <span class="quantity">0</span>
               <button class="plus">+</button>
             </div>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Icetea', this.parentElement.querySelector('.quantity').textContent, 90)">Add to Cart</button>
           </div>
 
           <div class="food-item">
             <img src="{{ url_for('static', filename='images/lemonade.png') }}" alt="Lemonade">
             <p>Lemonade</p>
+            <p class="price">₱100</p>
             <div class="quantity-container">
               <button class="minus">−</button>
               <span class="quantity">0</span>
               <button class="plus">+</button>
             </div>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Lemonade', this.parentElement.querySelector('.quantity').textContent, 100)">Add to Cart</button>
           </div>
 
           <div class="food-item">
             <img src="{{ url_for('static', filename='images/soda.png') }}" alt="Soda">
             <p>Soda</p>
+            <p class="price">₱70</p>
             <div class="quantity-container">
               <button class="minus">−</button>
               <span class="quantity">0</span>
               <button class="plus">+</button>
             </div>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Soda', this.parentElement.querySelector('.quantity').textContent, 70)">Add to Cart</button>
           </div>
 
           <div class="food-item">
             <img src="{{ url_for('static', filename='images/beer.png') }}" alt="Beer">
             <p>Beer</p>
+            <p class="price">₱120</p>
             <div class="quantity-container">
               <button class="minus">−</button>
               <span class="quantity">0</span>
               <button class="plus">+</button>
             </div>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Beer', this.parentElement.querySelector('.quantity').textContent, 120)">Add to Cart</button>
           </div>
 
           <div class="food-item">
             <img src="{{ url_for('static', filename='images/tequila.png') }}" alt="Tequila">
             <p>Tequila</p>
+            <p class="price">₱200</p>
             <div class="quantity-container">
               <button class="minus">−</button>
               <span class="quantity">0</span>
               <button class="plus">+</button>
             </div>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Tequila', this.parentElement.querySelector('.quantity').textContent, 200)">Add to Cart</button>
           </div>
 
           <div class="food-item">
             <img src="{{ url_for('static', filename='images/water.png') }}" alt="Water">
             <p>Water</p>
+            <p class="price">₱30</p>
             <div class="quantity-container">
               <button class="minus">−</button>
               <span class="quantity">0</span>
               <button class="plus">+</button>
             </div>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Water', this.parentElement.querySelector('.quantity').textContent, 30)">Add to Cart</button>
           </div>
 
           <div class="food-item">
             <img src="{{ url_for('static', filename='images/coffee.png') }}" alt="Coffee">
             <p>Coffee</p>
+            <p class="price">₱110</p>
             <div class="quantity-container">
               <button class="minus">−</button>
               <span class="quantity">0</span>
               <button class="plus">+</button>
             </div>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Coffee', this.parentElement.querySelector('.quantity').textContent, 110)">Add to Cart</button>
           </div>
 
           <div class="food-item">
             <img src="{{ url_for('static', filename='images/hotchocolate.png') }}" alt="Hot Chocolate">
             <p>Hot Chocolate</p>
+            <p class="price">₱120</p>
             <div class="quantity-container">
               <button class="minus">−</button>
               <span class="quantity">0</span>
               <button class="plus">+</button>
             </div>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('HotChocolate', this.parentElement.querySelector('.quantity').textContent, 120)">Add to Cart</button>
           </div>
 
         </div>
@@ -160,5 +170,6 @@
 
   <script src="{{ url_for('static', filename='javascript/dashboard.js') }}"></script>
   <script src="{{ url_for('static', filename='javascript/quantity.js') }}"></script>
+  <script src="{{ url_for('static', filename='javascript/addToCart.js') }}"></script>
 </body>
 </html>
