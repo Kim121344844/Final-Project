@@ -99,7 +99,7 @@
             <div class="quantity-container">
               <button class="minus">−</button><span class="quantity">0</span><button class="plus">+</button>
             </div>
-            <<button class="add-to-cart" onclick="addToCart('Enchiladas', this.parentElement.querySelector('.quantity').textContent, 160)">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Enchiladas', this.parentElement.querySelector('.quantity').textContent, 160)">Add to Cart</button>
           </div>
 
           <div class="food-item">
@@ -336,6 +336,7 @@
       </section>
     </main>
   </div>
+
 
   <script src="{{ url_for('static', filename='javascript/dashboard.js') }}"></script>
   <script src="{{ url_for('static', filename='javascript/quantity.js') }}"></script>

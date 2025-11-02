@@ -40,10 +40,19 @@
         <tbody id="cartTable"></tbody>
       </table>
     </section>
+
+    <section style="text-align:center; margin-top: 20px;">
+      <button id="placeOrderBtn" 
+              style="background-color: orange; color:white; padding:10px 25px; border:none; border-radius:8px; font-size:16px; cursor:pointer;">
+        Place Order
+      </button>
+    </section>
   </main>
 
   <script src="{{ url_for('static', filename='javascript/chart.js') }}"></script>
   <script src="{{ url_for('static', filename='javascript/dashboard.js') }}"></script>
   <script src="{{ url_for('static', filename='javascript/addToCart.js') }}"></script>
+  <script src="{{ url_for('static', filename='javascript/payment.js') }}"></script>
+  
 </body>
 </html>
