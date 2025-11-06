@@ -7,8 +7,8 @@ app.secret_key = 'your_secret_key'
 
 db = mysql.connector.connect(
     host="localhost",
-    user="root",
-    password="", 
+    user="Kim",
+    password="kim@pogi202520", 
     database="kimstore_db"
 )
 cursor = db.cursor(dictionary=True)
